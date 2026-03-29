@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #fafafa;
+  --color-surface: #f0f0f0;
+  --color-border: #e0e0e0;
+  --color-text-primary: #0a0a0a;
+  --color-text-secondary: #555555;
+  --color-accent: #6366f1;
+}
+
+.dark {
+  --color-background: #0a0a0a;
+  --color-surface: #111111;
+  --color-border: #222222;
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #888888;
+  --color-accent: #6366f1;
+}
+
+html {
+  color-scheme: dark;
+}
+
+html:not(.dark) {
+  color-scheme: light;
+}

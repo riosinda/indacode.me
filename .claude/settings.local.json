@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx:*)",
+      "Bash(npm --version)",
+      "Read(//c/Users/josei/AppData/Roaming/**)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Users/josei/AppData/Local/Programs/**)",
+      "Bash(export PATH=\"/c/Users/josei/AppData/Local/reflex/bun/bin:$PATH\")",
+      "Bash(bun --version)",
+      "Bash(bunx create-next-app@14 . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(bun install:*)",
+      "Bash(bun run:*)",
+      "Bash(bun add:*)"
+    ]
+  }
+}
