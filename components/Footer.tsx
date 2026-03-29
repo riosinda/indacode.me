@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-[#222222] mt-24">
+    <footer className="border-t border-border mt-24">
       <div className="mx-auto max-w-3xl px-6 py-8 flex items-center justify-between">
         <span className="text-sm text-text-secondary">
-          © {new Date().getFullYear()} José Indalecio Ríos
+          MIT License © {new Date().getFullYear()} José Indalecio Ríos
         </span>
         <div className="flex items-center gap-4">
           <a
