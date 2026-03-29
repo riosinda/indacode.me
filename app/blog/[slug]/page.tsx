@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getAllPosts, getPostBySlug } from '@/lib/posts'
 
@@ -22,10 +23,16 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-20">
-      <header className="mb-10">
-        <h1 className="text-2xl font-medium text-text-primary mb-3">{post.title}</h1>
+      <Link
+        href="/blog"
+        className="text-xs text-text-secondary hover:text-accent transition-colors mb-10 inline-block"
+      >
+        ← Blog
+      </Link>
+      <header className="mb-12">
+        <h1 className="text-2xl font-medium text-text-primary mb-4">{post.title}</h1>
         <div className="flex items-center gap-4">
-          <time className="text-sm text-text-secondary">{post.date}</time>
+          <time className="text-xs text-text-secondary">{post.date}</time>
           {post.tags.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {post.tags.map((tag) => (
