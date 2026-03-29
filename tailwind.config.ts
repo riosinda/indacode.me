@@ -18,6 +18,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-inter)'],
+        serif: ['var(--font-newsreader)'],
         mono: ['var(--font-mono)'],
       },
     },

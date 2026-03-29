@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Newsreader } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -9,12 +9,18 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  variable: '--font-newsreader',
+  style: ['normal', 'italic'],
+})
+
 export const metadata: Metadata = {
   title: {
-    default: 'José Indalecio Ríos — AI Engineer',
+    default: 'Indalecio Ríos',
     template: '%s | indacode.me',
   },
-  description: 'AI Engineer. Projects, blog posts, and professional profile.',
+  description: 'AI-projects, blog posts about AI, and my professional profile.',
   metadataBase: new URL('https://indacode.me'),
 }
 
@@ -25,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans bg-background text-text-primary antialiased`}>
+      <body className={`${inter.variable} ${newsreader.variable} font-sans bg-background text-text-primary antialiased`}>
         <Navbar />
         <main className="min-h-screen pt-16">
           {children}
