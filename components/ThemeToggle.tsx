@@ -10,6 +10,7 @@ export default function ThemeToggle() {
     const isDark = stored ? stored === 'dark' : true
     setDark(isDark)
     document.documentElement.classList.toggle('dark', isDark)
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', isDark ? '#0a0a0a' : '#fafafa')
   }, [])
 
   function toggle() {
@@ -17,6 +18,7 @@ export default function ThemeToggle() {
     setDark(next)
     document.documentElement.classList.toggle('dark', next)
     localStorage.setItem('theme', next ? 'dark' : 'light')
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', next ? '#0a0a0a' : '#fafafa')
   }
 
   return (
