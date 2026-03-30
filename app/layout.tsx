@@ -17,11 +17,17 @@ const newsreader = Newsreader({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Indalecio Ríos',
-    template: '%s | Indalecio Ríos',
+    default: 'indacode',
+    template: '%s | indacode',
   },
   description: 'AI-projects, blog posts about AI, and my professional profile.',
   metadataBase: new URL('https://indacode.me'),
+  icons: {
+    icon: [
+      { url: '/icon-light.svg', media: '(prefers-color-scheme: light)' },
+      { url: '/icon-dark.svg', media: '(prefers-color-scheme: dark)' },
+    ],
+  },
 }
 
 export default function RootLayout({
