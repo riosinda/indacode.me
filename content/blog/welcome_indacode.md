@@ -1,7 +1,7 @@
 ---
 title: "Welcome to Indacode"
 date: "2026-04-01"
-description: "First blog post"
+description: "First post, and welcome"
 tags: ["Blog", "Personal", "AI"]
 published: true
 is_newest: true

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getAllPosts, getPostBySlug } from '@/lib/posts'
+import SharePost from '@/components/SharePost'
 
 interface Props {
   params: { slug: string }
@@ -27,7 +28,7 @@ export default async function PostPage({ params }: Props) {
         href="/blog"
         className="text-xs text-text-secondary hover:text-accent transition-colors mb-10 inline-block"
       >
-        ← Blog
+        ← Posts
       </Link>
       <header className="mb-12">
         <div className="flex items-center gap-3 mb-4">
@@ -59,6 +60,7 @@ export default async function PostPage({ params }: Props) {
         className="prose dark:prose-invert max-w-none prose-headings:font-medium prose-a:text-accent prose-code:font-mono"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
+      <SharePost slug={post.slug} title={post.title} />
     </div>
   )
 }

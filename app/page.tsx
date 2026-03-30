@@ -100,7 +100,7 @@ export default function Home() {
         <section className="mb-16">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xs font-medium text-text-secondary uppercase tracking-widest">
-              Latest posts
+              Latest Posts
             </h2>
             <Link href="/blog" className="text-xs text-accent hover:text-accent/80 transition-colors">
               View all →
