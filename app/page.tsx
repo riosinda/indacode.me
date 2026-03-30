@@ -98,11 +98,11 @@ export default function Home() {
 
       {latestPosts.length > 0 && (
         <section className="mb-16">
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-2">
             <h2 className="text-xs font-medium text-text-secondary uppercase tracking-widest">
               Latest Posts
             </h2>
-            <Link href="/blog" className="text-xs text-accent hover:text-accent/80 transition-colors">
+            <Link href="/posts" className="text-xs text-accent hover:text-accent/80 transition-colors">
               View all →
             </Link>
           </div>

@@ -25,36 +25,36 @@ export default async function PostPage({ params }: Props) {
   return (
     <div className="mx-auto max-w-3xl px-6 py-20">
       <Link
-        href="/blog"
+        href="/posts"
         className="text-xs text-text-secondary hover:text-accent transition-colors mb-10 inline-block"
       >
         ← Posts
       </Link>
       <header className="mb-12">
-        <div className="flex items-center gap-3 mb-4">
-          <h1 className="text-2xl font-medium text-text-primary">{post.title}</h1>
-          {post.is_newest && (
-            <span className="flex items-center gap-1 text-xs font-mono text-accent shrink-0">
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
-              </span>
-              New
-            </span>
-          )}
-        </div>
-        <div className="flex items-center gap-4">
-          <time className="text-xs text-text-secondary">{post.date}</time>
-          {post.tags.length > 0 && (
-            <div className="flex flex-wrap gap-3">
-              {post.tags.map((tag) => (
-                <span key={tag} className="font-mono text-xs text-text-secondary/60">
-                  #{tag}
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <div className="flex items-center gap-3">
+            <h1 className="text-2xl font-medium text-text-primary">{post.title}</h1>
+            {post.is_newest && (
+              <span className="flex items-center gap-1 text-xs font-mono text-accent shrink-0">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
                 </span>
-              ))}
-            </div>
-          )}
+                New
+              </span>
+            )}
+          </div>
+          <time className="text-xs text-text-secondary shrink-0 mt-2">{post.date}</time>
         </div>
+        {post.tags.length > 0 && (
+          <div className="flex flex-wrap gap-3">
+            {post.tags.map((tag) => (
+              <span key={tag} className="font-mono text-xs text-text-secondary/60">
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
       </header>
       <article
         className="prose dark:prose-invert max-w-none prose-headings:font-medium prose-a:text-accent prose-code:font-mono"

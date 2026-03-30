@@ -11,9 +11,9 @@ interface PostCardProps {
 
 export default function PostCard({ slug, title, date, description, tags, is_newest }: PostCardProps) {
   return (
-    <article className="group py-6">
+    <article className="group py-3">
       <div className="flex items-start justify-between gap-4 mb-2">
-        <Link href={`/blog/${slug}`} className="flex items-center gap-2">
+        <Link href={`/posts/${slug}`} className="flex items-center gap-2">
           <h2 className="text-base font-medium text-text-primary group-hover:text-accent transition-colors">
             {title}
           </h2>
