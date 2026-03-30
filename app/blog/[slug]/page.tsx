@@ -30,17 +30,25 @@ export default async function PostPage({ params }: Props) {
         ← Blog
       </Link>
       <header className="mb-12">
-        <h1 className="text-2xl font-medium text-text-primary mb-4">{post.title}</h1>
+        <div className="flex items-center gap-3 mb-4">
+          <h1 className="text-2xl font-medium text-text-primary">{post.title}</h1>
+          {post.is_newest && (
+            <span className="flex items-center gap-1 text-xs font-mono text-accent shrink-0">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
+              </span>
+              New
+            </span>
+          )}
+        </div>
         <div className="flex items-center gap-4">
           <time className="text-xs text-text-secondary">{post.date}</time>
           {post.tags.length > 0 && (
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
               {post.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-xs text-accent bg-accent/10 px-2 py-0.5 rounded"
-                >
-                  {tag}
+                <span key={tag} className="font-mono text-xs text-text-secondary/60">
+                  #{tag}
                 </span>
               ))}
             </div>
@@ -48,7 +56,7 @@ export default async function PostPage({ params }: Props) {
         </div>
       </header>
       <article
-        className="prose prose-invert prose-sm max-w-none font-serif prose-headings:font-sans prose-headings:font-medium prose-a:text-accent prose-code:font-mono"
+        className="prose dark:prose-invert max-w-none prose-headings:font-medium prose-a:text-accent prose-code:font-mono"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
     </div>

@@ -2,10 +2,6 @@ import type { Metadata } from 'next'
 import PostCard from '@/components/PostCard'
 import { getAllPosts } from '@/lib/posts'
 
-export const metadata: Metadata = {
-  title: 'Blog',
-}
-
 export default function BlogPage() {
   const posts = getAllPosts()
 

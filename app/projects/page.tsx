@@ -1,10 +1,6 @@
 import type { Metadata } from 'next'
 import ProjectCard from '@/components/ProjectCard'
 
-export const metadata: Metadata = {
-  title: 'Projects',
-}
-
 const projects = [
   {
     name: 'indacode.me',

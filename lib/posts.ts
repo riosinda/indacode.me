@@ -13,6 +13,7 @@ export interface PostMeta {
   description: string
   tags: string[]
   published: boolean
+  is_newest: boolean
 }
 
 export interface Post extends PostMeta {
@@ -39,6 +40,7 @@ export function getAllPosts(): PostMeta[] {
         description: data.description as string,
         tags: (data.tags as string[]) ?? [],
         published: (data.published as boolean) ?? false,
+        is_newest: (data.is_newest as boolean) ?? false,
       }
     })
     .filter((post) => post.published)
@@ -67,6 +69,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     description: data.description as string,
     tags: (data.tags as string[]) ?? [],
     published: data.published as boolean,
+    is_newest: (data.is_newest as boolean) ?? false,
     contentHtml,
   }
 }
