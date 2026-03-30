@@ -17,11 +17,17 @@ const newsreader = Newsreader({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Indalecio Ríos',
-    template: '%s | indacode.me',
+    default: 'indacode',
+    template: '%s | indacode',
   },
   description: 'AI-projects, blog posts about AI, and my professional profile.',
   metadataBase: new URL('https://indacode.me'),
+  icons: {
+    icon: [
+      { url: '/icon-light.svg', media: '(prefers-color-scheme: light)' },
+      { url: '/icon-dark.svg', media: '(prefers-color-scheme: dark)' },
+    ],
+  },
 }
 
 export default function RootLayout({
@@ -31,6 +37,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.classList.remove('dark');})();`,
+          }}
+        />
+      </head>
       <body className={`${inter.variable} ${newsreader.variable} font-sans bg-background text-text-primary antialiased`}>
         <Navbar />
         <main className="min-h-screen pt-16">
