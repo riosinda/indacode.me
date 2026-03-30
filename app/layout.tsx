@@ -13,6 +13,7 @@ const newsreader = Newsreader({
   subsets: ['latin'],
   variable: '--font-newsreader',
   style: ['normal', 'italic'],
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -38,6 +39,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
+        <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.classList.remove('dark');})();`,
