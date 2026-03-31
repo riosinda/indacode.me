@@ -11,7 +11,7 @@ is_newest: true
 
 I'm from Zacatecas, Mexico, and I've been working as an AI engineer for a few years now.
 
-I have some experience building AI-powered services (ML and DL models, LLMs, AI agents, ...) and I enjoy creating new tools as a hobby — it's also a great way to keep learning.
+I have some experience building AI-powered services (ML and DL models, LLMs, AI agents, ...) and I enjoy creating new tools as a hobby, it's also a great way to keep learning.
 
 I started this blog because I wanted to finally kick off a personal project I've been putting off for a while: **indacode** (yes, it's Indalecio + Code :D).
 

@@ -4,7 +4,7 @@ interface SharePostProps {
 }
 
 export default function SharePost({ slug, title }: SharePostProps) {
-  const url = `https://indacode.me/blog/${slug}`
+  const url = `https://indacode.me/posts/${slug}`
   const encoded = encodeURIComponent(url)
   const encodedTitle = encodeURIComponent(title)
 

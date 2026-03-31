@@ -7,7 +7,7 @@ import ThemeToggle from '@/components/ThemeToggle'
 
 const links = [
   { href: '/about', label: 'About' },
-  { href: '/blog', label: 'Posts' },
+  { href: '/posts', label: 'Posts' },
   { href: '/projects', label: 'Projects' },
 ]
 
