@@ -106,7 +106,8 @@ export default function Home() {
               View all →
             </Link>
           </div>
-          <div className="divide-y divide-border/40">
+          <hr className="border-border mb-2" />
+          <div className="divide-y divide-border">
             {latestPosts.map((post) => (
               <PostCard key={post.slug} {...post} />
             ))}
