@@ -32,13 +32,13 @@ export default function AboutPage() {
       <h1 className="text-2xl font-medium text-text-primary mb-12">About</h1>
 
       <div className="flex flex-col sm:flex-row gap-10 mb-16">
-        <div className="shrink-0">
+        <div className="shrink-0 flex justify-center">
           <Image
             src="/images/profile.jpeg"
             alt="José Indalecio Ríos"
             width={240}
             height={320}
-            className="object-cover border border-border"
+            className="object-cover border border-border rounded-lg"
             priority
           />
         </div>
